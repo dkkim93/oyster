@@ -110,6 +110,7 @@ def experiment(variant):
     # run the algorithm
     algorithm.train()
 
+
 def deep_update_dict(fr, to):
     ''' update dict of dicts with new values '''
     # assume dicts have same keys
@@ -119,6 +120,7 @@ def deep_update_dict(fr, to):
         else:
             to[k] = v
     return to
+
 
 @click.command()
 @click.argument('config', default=None)
@@ -136,6 +138,6 @@ def main(config, gpu, docker, debug):
 
     experiment(variant)
 
+
 if __name__ == "__main__":
     main()
-

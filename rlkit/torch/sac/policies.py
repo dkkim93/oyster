@@ -67,7 +67,7 @@ class TanhGaussianPolicy(Mlp, ExplorationPolicy):
         actions = self.get_actions(obs, deterministic=deterministic)
         return actions[0, :], {}
 
-    @torch.no_grad()
+    # @torch.no_grad()  dkk commented
     def get_actions(self, obs, deterministic=False):
         outputs = self.forward(obs, deterministic=deterministic)[0]
         return np_ify(outputs)
