@@ -22,8 +22,8 @@ python --version
 
 # # Comment for using GPU
 # export CUDA_VISIBLE_DEVICES=-1
-#
-# Train tf 
+
+# Start training
 print_header "Training network"
 cd $DIR
 python launch_experiment.py ./configs/cheetah-dir.json
